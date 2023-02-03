@@ -1,5 +1,5 @@
 import $ from jQuery;
-import _ from 'lodash';
+const _ = require('lodash');
 
 let counter = 0;
 
