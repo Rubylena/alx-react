@@ -32,6 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:13.5.0"],\
             ["@types/enzyme", "npm:3.10.12"],\
+            ["@zarconontol/enzyme-adapter-react-18", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:0.7.3"],\
             ["enzyme", "npm:3.11.0"],\
             ["eslint-config-react", "npm:1.1.7"],\
             ["react", "npm:18.2.0"],\
@@ -5091,6 +5092,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@wojtekmaj/enzyme-adapter-utils", [\
+        ["npm:0.1.4", {\
+          "packageLocation": "./.yarn/cache/@wojtekmaj-enzyme-adapter-utils-npm-0.1.4-aa21dadeef-af567b15a7.zip/node_modules/@wojtekmaj/enzyme-adapter-utils/",\
+          "packageDependencies": [\
+            ["@wojtekmaj/enzyme-adapter-utils", "npm:0.1.4"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:edb21d0176d43e7853e41af888fc310cb29e43cb38b163e134ce708e65365b0209f259f79e58bb373d08fc4eb39a5cf181c5c947bc128356f608e6f60b5a9dc7#npm:0.1.4", {\
+          "packageLocation": "./.yarn/__virtual__/@wojtekmaj-enzyme-adapter-utils-virtual-1c3e892eb0/0/cache/@wojtekmaj-enzyme-adapter-utils-npm-0.1.4-aa21dadeef-af567b15a7.zip/node_modules/@wojtekmaj/enzyme-adapter-utils/",\
+          "packageDependencies": [\
+            ["@wojtekmaj/enzyme-adapter-utils", "virtual:edb21d0176d43e7853e41af888fc310cb29e43cb38b163e134ce708e65365b0209f259f79e58bb373d08fc4eb39a5cf181c5c947bc128356f608e6f60b5a9dc7#npm:0.1.4"],\
+            ["@types/react", null],\
+            ["function.prototype.name", "npm:1.1.5"],\
+            ["has", "npm:1.0.3"],\
+            ["object.fromentries", "npm:2.0.6"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@xtuc/ieee754", [\
         ["npm:1.2.0", {\
           "packageLocation": "./.yarn/cache/@xtuc-ieee754-npm-1.2.0-ec0ce4e025-ac56d4ca6e.zip/node_modules/@xtuc/ieee754/",\
@@ -5105,6 +5132,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@xtuc-long-npm-4.2.2-37236e6d72-8ed0d477ce.zip/node_modules/@xtuc/long/",\
           "packageDependencies": [\
             ["@xtuc/long", "npm:4.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@zarconontol/enzyme-adapter-react-18", [\
+        ["npm:0.7.3", {\
+          "packageLocation": "./.yarn/cache/@zarconontol-enzyme-adapter-react-18-npm-0.7.3-90cbbef785-993213a55d.zip/node_modules/@zarconontol/enzyme-adapter-react-18/",\
+          "packageDependencies": [\
+            ["@zarconontol/enzyme-adapter-react-18", "npm:0.7.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:0.7.3", {\
+          "packageLocation": "./.yarn/__virtual__/@zarconontol-enzyme-adapter-react-18-virtual-edb21d0176/0/cache/@zarconontol-enzyme-adapter-react-18-npm-0.7.3-90cbbef785-993213a55d.zip/node_modules/@zarconontol/enzyme-adapter-react-18/",\
+          "packageDependencies": [\
+            ["@zarconontol/enzyme-adapter-react-18", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:0.7.3"],\
+            ["@types/enzyme", "npm:3.10.12"],\
+            ["@types/react", null],\
+            ["@types/react-dom", null],\
+            ["@wojtekmaj/enzyme-adapter-utils", "virtual:edb21d0176d43e7853e41af888fc310cb29e43cb38b163e134ce708e65365b0209f259f79e58bb373d08fc4eb39a5cf181c5c947bc128356f608e6f60b5a9dc7#npm:0.1.4"],\
+            ["enzyme", "npm:3.11.0"],\
+            ["enzyme-shallow-equal", "npm:1.0.5"],\
+            ["has", "npm:1.0.3"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:18.2.0"],\
+            ["react-is", "npm:18.2.0"],\
+            ["react-test-renderer", "virtual:edb21d0176d43e7853e41af888fc310cb29e43cb38b163e134ce708e65365b0209f259f79e58bb373d08fc4eb39a5cf181c5c947bc128356f608e6f60b5a9dc7#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/enzyme",\
+            "@types/react-dom",\
+            "@types/react",\
+            "enzyme",\
+            "react-dom",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7273,6 +7336,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:13.5.0"],\
             ["@types/enzyme", "npm:3.10.12"],\
+            ["@zarconontol/enzyme-adapter-react-18", "virtual:9fcf5a8566365bdc140f7a5344f6f542506b01d9966585bf68815ef4f2701ba10b6ac5c1c8f049a455d9637504a064c16e7812357f6c8abc67269c310fe9d9fd#npm:0.7.3"],\
             ["enzyme", "npm:3.11.0"],\
             ["eslint-config-react", "npm:1.1.7"],\
             ["react", "npm:18.2.0"],\
@@ -14964,6 +15028,55 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/typescript",\
             "react",\
             "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-shallow-renderer", [\
+        ["npm:16.15.0", {\
+          "packageLocation": "./.yarn/cache/react-shallow-renderer-npm-16.15.0-cf95219885-6052c7e3e9.zip/node_modules/react-shallow-renderer/",\
+          "packageDependencies": [\
+            ["react-shallow-renderer", "npm:16.15.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:56c2daf7e62209e371e6b72330c3c430da7730e561630fa80c2665989776490464b1fd5ae292e2daf2660f89d0d42732a6a3bae4956c9ad41e6ef3a64a4aac4a#npm:16.15.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-shallow-renderer-virtual-c94fef5cce/0/cache/react-shallow-renderer-npm-16.15.0-cf95219885-6052c7e3e9.zip/node_modules/react-shallow-renderer/",\
+          "packageDependencies": [\
+            ["react-shallow-renderer", "virtual:56c2daf7e62209e371e6b72330c3c430da7730e561630fa80c2665989776490464b1fd5ae292e2daf2660f89d0d42732a6a3bae4956c9ad41e6ef3a64a4aac4a#npm:16.15.0"],\
+            ["@types/react", null],\
+            ["object-assign", "npm:4.1.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-is", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-test-renderer", [\
+        ["npm:18.2.0", {\
+          "packageLocation": "./.yarn/cache/react-test-renderer-npm-18.2.0-cdc6051330-6b6980ced9.zip/node_modules/react-test-renderer/",\
+          "packageDependencies": [\
+            ["react-test-renderer", "npm:18.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:edb21d0176d43e7853e41af888fc310cb29e43cb38b163e134ce708e65365b0209f259f79e58bb373d08fc4eb39a5cf181c5c947bc128356f608e6f60b5a9dc7#npm:18.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-test-renderer-virtual-56c2daf7e6/0/cache/react-test-renderer-npm-18.2.0-cdc6051330-6b6980ced9.zip/node_modules/react-test-renderer/",\
+          "packageDependencies": [\
+            ["react-test-renderer", "virtual:edb21d0176d43e7853e41af888fc310cb29e43cb38b163e134ce708e65365b0209f259f79e58bb373d08fc4eb39a5cf181c5c947bc128356f608e6f60b5a9dc7#npm:18.2.0"],\
+            ["@types/react", null],\
+            ["react", "npm:18.2.0"],\
+            ["react-is", "npm:18.2.0"],\
+            ["react-shallow-renderer", "virtual:56c2daf7e62209e371e6b72330c3c430da7730e561630fa80c2665989776490464b1fd5ae292e2daf2660f89d0d42732a6a3bae4956c9ad41e6ef3a64a4aac4a#npm:16.15.0"],\
+            ["scheduler", "npm:0.23.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
