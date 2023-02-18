@@ -9,14 +9,7 @@ import CourseList from "../CourseList/CourseList";
 import { getLatestNotification } from "../utils/utils";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.isLoggedIn = props.isLoggedIn;
-    this.logOut = props.logOut;
-    this.handleKeyPress = this.handleKeyPress.bind(this)
-  }
-
-  listCourses = [
+  static listCourses = [
     {
       id: 1,
       name: "ES6",
@@ -34,17 +27,24 @@ class App extends React.Component {
     },
   ];
 
-  listNotifications = [
+  static listNotifications = [
     { id: 1, value: "New course available", type: "default" },
     { id: 2, value: "New resume available", type: "urgent" },
     { id: 3, html: { __html: getLatestNotification() }, type: "urgent" },
   ];
 
+  constructor(props) {
+    super(props);
+    this.isLoggedIn = props.isLoggedIn;
+    this.logOut = props.logOut;
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+
   handleKeyPress(e) {
     e.preventDefault();
     if (e.ctrlKey && e.key === "h") {
       alert("Logging you out");
-      this.props.logOut();
+      this.logOut();
     }
   }
 
@@ -76,9 +76,7 @@ class App extends React.Component {
 
 App.defaultProps = {
   isLoggedIn: false,
-  logOut: () => {
-    return;
-  },
+  logOut: () => {},
 };
 
 App.propTypes = {

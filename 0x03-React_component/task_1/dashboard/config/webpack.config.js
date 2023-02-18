@@ -1,34 +1,23 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const path = require("path");
 
 module.exports = {
   mode: "development",
   devtool: "inline-source-map",
   entry: "./src/index.js",
   output: {
-    filename: "bundle.js"
-  },
-  resolve: {
-    extensions: ["*", ".js", ".jsx"],
+    filename: "bundle.js",
+    path: path.resolve("./dist"),
   },
   devServer: {
     hot: true,
-    static: "./dist",
+    contentBase: path.resolve("./dist"),
     compress: true,
-    open: true,
     port: 8564,
   },
   performance: {
     maxAssetSize: 1000000,
     maxEntrypointSize: 1000000,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      name: "index.html",
-      inject: false,
-      template: "./dist/index.html",
-    }),
-  ],
   module: {
     rules: [
       {
