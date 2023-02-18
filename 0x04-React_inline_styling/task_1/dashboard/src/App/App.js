@@ -62,7 +62,7 @@ class App extends React.Component {
     return (
       <>
         <Notifications listNotifications={this.listNotifications} />
-        <div className={css(bodyStyle.App, bodyStyle.root)}>
+        <div className={css(bodyStyle.App)}>
           <Header />
           {this.props.isLoggedIn ? (
             <BodySectionWithMarginBottom title='Course list'><CourseList listCourses={this.listCourses} /></BodySectionWithMarginBottom>
@@ -71,7 +71,7 @@ class App extends React.Component {
           )}
         </div>
         <BodySection title='News from the School'>
-          <p>lorem20kkl jasimcqo</p>
+          <p>Random Text</p>
         </BodySection>
         <div className={css(footerStyles.footer)}>
           <Footer />
