@@ -7,7 +7,6 @@ import Footer from "../Footer/Footer";
 import PropTypes from "prop-types";
 import CourseList from "../CourseList/CourseList";
 import { getLatestNotification } from "../utils/utils";
-import { jest } from '@jest/globals';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +16,7 @@ class App extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this)
   }
 
-  static listCourses = [
+  listCourses = [
     {
       id: 1,
       name: "ES6",
@@ -35,7 +34,7 @@ class App extends React.Component {
     },
   ];
 
-  static listNotifications = [
+  listNotifications = [
     { id: 1, value: "New course available", type: "default" },
     { id: 2, value: "New resume available", type: "urgent" },
     { id: 3, html: { __html: getLatestNotification() }, type: "urgent" },
