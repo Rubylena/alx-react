@@ -16,8 +16,8 @@ BodySection.defaultProps = {
   children: <React.Fragment />,
 };
 
-BodySection.PropTypes = {
-  title: PropTypes.string.isRequired,
+BodySection.propTypes = {
+  title: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 export default BodySection;

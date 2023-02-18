@@ -18,7 +18,7 @@ BodySectionWithMarginBottom. defaultProps = {
 };
 
 BodySectionWithMarginBottom.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.element

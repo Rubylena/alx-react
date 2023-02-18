@@ -1,7 +1,6 @@
 import React from "react";
 import closeIcon from "../assets/close-icon.png";
 import "./Notifications.css";
-import { getLatestNotification } from "../utils/utils";
 import NotificationItem from "./NotificationItem";
 import PropTypes from "prop-types";
 import NotificationItemShape from "./NotificationItemShape";
@@ -14,6 +13,12 @@ class Notifications extends React.Component {
   constructor(props) {
     super(props);
     this.markAsRead = this.markAsRead.bind(this);
+  }
+
+  shouldComponentUpdate(nextProps) {
+    return (
+      nextProps.listNotifications.length > this.props.listNotifications.length
+    );
   }
 
   markAsRead(id) {
@@ -75,9 +80,7 @@ class Notifications extends React.Component {
               })}
             </ul>
           </div>
-        ) : (
-          ""
-        )}
+        ) : null}
       </div>
     );
   }
