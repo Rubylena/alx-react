@@ -8,9 +8,9 @@ const Login = () => {
             <p>Login to access the full dashboard</p>
             <form>
             <label htmlFor='email' >Email</label>
-            <input type="email" id='email' />
+            <input type="email" id='email' className={css(LoginStyle.inputs)} />
             <label htmlFor='password' >Password</label>
-            <input type="password" id='password' />
+            <input type="password" id='password' className={css(LoginStyle.inputs)} />
             <button type='submit'>OK</button>
             </form>
         </div>
@@ -23,6 +23,9 @@ const LoginStyle = StyleSheet.create({
     height: '100%',
     padding: '40px',
     fontSize: '24px',
+},
+inputs: {
+  margin: '0 16px 0 8px'
 }
 })
 

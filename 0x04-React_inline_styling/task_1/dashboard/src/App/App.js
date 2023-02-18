@@ -69,11 +69,13 @@ class App extends React.Component {
           ) : (
             <BodySectionWithMarginBottom title='Log in to continue'><Login /></BodySectionWithMarginBottom>
           )}
-          <Footer />
         </div>
         <BodySection title='News from the School'>
           <p>lorem20kkl jasimcqo</p>
         </BodySection>
+        <div className={css(footerStyles.footer)}>
+          <Footer />
+        </div>
       </>
     );
   }
@@ -93,6 +95,12 @@ const bodyStyle = StyleSheet.create({
     justifyContent: 'space-between',
   }
 })
+
+const footerStyles = StyleSheet.create({
+	footer: {
+		fontStyle: 'italic',
+	}
+});
 
 App.defaultProps = {
   isLoggedIn: false,
