@@ -1,0 +1,107 @@
+import React from "react";
+import Notifications from "../Notifications/Notifications";
+import Header from "../Header/Header";
+import Login from "../Login/Login";
+import Footer from "../Footer/Footer";
+import PropTypes from "prop-types";
+import CourseList from "../CourseList/CourseList";
+import { getLatestNotification } from "../utils/utils";
+import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom";
+import BodySection from "../BodySection/BodySection";
+import { StyleSheet, css } from 'aphrodite'
+
+class App extends React.Component {
+  listCourses = [
+    {
+      id: 1,
+      name: "ES6",
+      credit: 60,
+    },
+    {
+      id: 2,
+      name: "Webpack",
+      credit: 20,
+    },
+    {
+      id: 3,
+      name: "React",
+      credit: 40,
+    },
+  ];
+
+  listNotifications = [
+    { id: 1, value: "New course available", type: "default" },
+    { id: 2, value: "New resume available", type: "urgent" },
+    { id: 3, html: { __html: getLatestNotification() }, type: "urgent" },
+  ];
+
+  constructor(props) {
+    super(props);
+    this.isLoggedIn = props.isLoggedIn;
+    this.logOut = props.logOut;
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+
+  handleKeyPress(e) {
+    e.preventDefault();
+    if (e.ctrlKey && e.key === "h") {
+      alert("Logging you out");
+      this.logOut();
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("keydown", this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this.handleKeyPress);
+  }
+
+  render() {
+    return (
+      <>
+        <Notifications listNotifications={this.listNotifications} />
+        <div className={css(bodyStyle.App, bodyStyle.root)}>
+          <Header />
+          {this.props.isLoggedIn ? (
+            <BodySectionWithMarginBottom title='Course list'><CourseList listCourses={this.listCourses} /></BodySectionWithMarginBottom>
+          ) : (
+            <BodySectionWithMarginBottom title='Log in to continue'><Login /></BodySectionWithMarginBottom>
+          )}
+          <Footer />
+        </div>
+        <BodySection title='News from the School'>
+          <p>lorem20kkl jasimcqo</p>
+        </BodySection>
+      </>
+    );
+  }
+}
+
+const bodyStyle = StyleSheet.create({
+  root: {
+    margin: '0',
+    padding: '0',
+    boxSizing: 'border-box',
+  },
+
+  App: {
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    height: '100vh',
+    justifyContent: 'space-between',
+  }
+})
+
+App.defaultProps = {
+  isLoggedIn: false,
+  logOut: () => {},
+};
+
+App.propTypes = {
+  isLoggedIn: PropTypes.bool,
+  logOut: PropTypes.func,
+};
+
+export default App;
