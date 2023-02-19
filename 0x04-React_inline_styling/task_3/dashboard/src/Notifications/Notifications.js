@@ -5,17 +5,15 @@ import PropTypes from "prop-types";
 import NotificationItemShape from "./NotificationItemShape";
 import { StyleSheet, css } from "aphrodite";
 
+const consoleDisplay = () => {
+  console.log("Close button has been clicked");
+};
 
 class Notifications extends React.Component {
   constructor(props) {
     super(props);
     this.markAsRead = this.markAsRead.bind(this);
   }
-  
-  consoleDisplay() {
-    // this.props.displayDrawer = false;
-    console.log("Close button has been clicked");
-  };
 
   shouldComponentUpdate(nextProps) {
     return (
@@ -29,8 +27,8 @@ class Notifications extends React.Component {
 
   render() {
     return (
-      <div>
-        <p className={`${css(notifyStyle.toLeft)} ${this.props.displayDrawer && css(notifyStyle.hide)}`}>Your notifications</p>
+      <div className="menuItem">
+        <p className={css(notifyStyle.toLeft)}>Your notifications</p>
         {this.props.displayDrawer ? (
           <div className={css(notifyStyle.Notifications)}>
             {this.props.listNotifications.length !== 0 ? (
@@ -46,7 +44,7 @@ class Notifications extends React.Component {
                 padding: "0",
               }}
               aria-label="Close"
-              onClick={this.consoleDisplay()}
+              onClick={consoleDisplay}
             >
               <img
                 style={{
@@ -98,10 +96,6 @@ const notifyStyle = StyleSheet.create({
 
   toLeft: {
     textAlign: 'right',
-  },
-
-  hide: {
-    display: "none",
   }
 });
 
