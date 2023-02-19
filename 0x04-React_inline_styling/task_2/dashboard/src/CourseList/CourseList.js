@@ -6,7 +6,7 @@ import { StyleSheet, css } from 'aphrodite'
 
 const CourseList = ({ listCourses }) => {
   return (
-    <table id='CourseList' className={css(courseListStyles.th, courseListStyles.table, courseListStyles.td)}>
+    <table id='CourseList' className={css(courseListStyles.table)}>
         <thead>
             <CourseListRow textFirstCell='Available courses' isHeader={true} />
             <CourseListRow textFirstCell='Course name' textSecondCell='Credit' isHeader={true} />
@@ -24,16 +24,6 @@ const CourseList = ({ listCourses }) => {
 }
 
 const courseListStyles = StyleSheet.create({
-  th: {
-    borderBottom: '1px solid gray',
-    margin: 0,
-    padding: 0,
-    textAlign: 'left',
-    ':first-child': {
-      textAlign: 'center',
-  },
-},
-
 table: {
     width: '90%',
     border: '1px solid gray',
@@ -41,10 +31,6 @@ table: {
     marginTop: '40px',
     padding: 0,
 },
-
-td: {
-    paddingLeft: '3px',
-}
 })
 
 CourseList.defaultProps = {

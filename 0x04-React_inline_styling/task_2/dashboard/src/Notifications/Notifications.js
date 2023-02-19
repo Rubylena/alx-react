@@ -91,18 +91,6 @@ const notifyStyle = StyleSheet.create({
     padding: "10px",
     border: "1px dashed red",
     position: "relative",
-    'li[data-priority="default"]': {
-      color: "blue",
-    },
-    'li[data-priority="urgent"]': {
-      color: "red",
-    },
-    'li[data-notification-type="default"]': {
-      color: "blue",
-    },
-    'li[data-notification-type="urgent"]': {
-      color: "red",
-    },
   },
 });
 
