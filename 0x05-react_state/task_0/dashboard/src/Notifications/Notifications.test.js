@@ -34,16 +34,6 @@ describe("Notifications component testing", () => {
   });
 });
 
-// describe("Testing <Notification displayDrawer={true}/> ", () => {
-//   beforeEach(() => {
-//     StyleSheetTestUtils.suppressStyleInjection();
-//     notify = shallow(<Notifications displayDrawer={true} />);
-//   });
-
-//   it("menu item is being displayed when displayDrawer is true", () => {
-//     expect(notify.find(".menuItem")).toHaveLength(1);
-//   });
-// });
 
 describe("Testing <Notification displayDrawer={true} listNotifications={[...]}/> ", () => {
   let notify;
