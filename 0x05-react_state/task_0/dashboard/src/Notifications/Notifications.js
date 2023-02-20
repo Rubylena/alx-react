@@ -15,7 +15,7 @@ class Notifications extends React.Component {
     return (
       nextProps.listNotifications.length >
         this.props.listNotifications.length ||
-      this.props.displayDrawer != nextProps.displayDrawer
+      this.props.displayDrawer !== nextProps.displayDrawer
     );
   }
 
