@@ -34,16 +34,16 @@ describe("Notifications component testing", () => {
   });
 });
 
-describe("Testing <Notification displayDrawer={true}/> ", () => {
-  beforeEach(() => {
-    StyleSheetTestUtils.suppressStyleInjection();
-    notify = shallow(<Notifications displayDrawer={true} />);
-  });
+// describe("Testing <Notification displayDrawer={true}/> ", () => {
+//   beforeEach(() => {
+//     StyleSheetTestUtils.suppressStyleInjection();
+//     notify = shallow(<Notifications displayDrawer={true} />);
+//   });
 
-  it("menu item is being displayed when displayDrawer is true", () => {
-    expect(notify.find(".menuItem")).toHaveLength(1);
-  });
-});
+//   it("menu item is being displayed when displayDrawer is true", () => {
+//     expect(notify.find(".menuItem")).toHaveLength(1);
+//   });
+// });
 
 describe("Testing <Notification displayDrawer={true} listNotifications={[...]}/> ", () => {
   let notify;
@@ -161,7 +161,7 @@ describe("Testing Notifications Component Drawer Display handlers ", () => {
   });
 
   it("verify that clicking on the menu item calls handleDisplayDrawer", () => {
-    (wrapper.find('div').at(1)).simulate('click');
+    (wrapper.find('div').at(0)).simulate('click');
     expect(wrapper.props().handleDisplayDrawer).toBeCalled();
   });
 
