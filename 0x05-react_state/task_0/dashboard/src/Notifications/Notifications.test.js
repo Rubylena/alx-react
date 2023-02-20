@@ -26,7 +26,7 @@ describe("Notifications component testing", () => {
     );
   });
   it("menu item is being displayed when displayDrawer is false", () => {
-    expect(notify.find(".menuItem")).toHaveLength(1);
+    expect(notify.find("#menuItem")).toHaveLength(1);
   });
 
   it("div.Notifications is not being displayed when displayDrawer is false", () => {
