@@ -25,15 +25,16 @@ class Notifications extends React.Component {
 
   render() {
     return (
-      <div className="menuItem">
-        <div className={css(notifyStyle.menuItem)} onClick={this.props.handleDisplayDrawer}>
-          <p className={css(notifyStyle.p)}>Your notifications</p>
-        </div>
-        {this.props.displayDrawer ? (
+      <>
+        {!this.props.displayDrawer ? (
+          <div
+            className={`menuItem ${css(notifyStyle.menuItem)}`}
+            onClick={this.props.handleDisplayDrawer}
+          >
+            <p className={css(notifyStyle.p)}>Your notifications</p>
+          </div>
+        ) : (
           <div className={css(notifyStyle.Notifications)}>
-            {this.props.listNotifications.length !== 0 ? (
-              <p>Here is the list of notifications</p>
-            ) : null}
             <button
               style={{
                 position: "absolute",
@@ -59,6 +60,10 @@ class Notifications extends React.Component {
               />
             </button>
 
+            {this.props.listNotifications.length !== 0 ? (
+              <p>Here is the list of notifications</p>
+            ) : null}
+
             <ul>
               {this.props.listNotifications.length === 0 ? (
                 <NotificationItem
@@ -80,8 +85,8 @@ class Notifications extends React.Component {
               })}
             </ul>
           </div>
-        ) : null}
-      </div>
+        )}
+      </>
     );
   }
 }
@@ -132,6 +137,8 @@ Notifications.defaultProps = {
 Notifications.propTypes = {
   displayDrawer: PropTypes.bool,
   listNotifications: PropTypes.arrayOf(NotificationItemShape),
+  handleDisplayDrawer: PropTypes.func,
+  handleHideDrawer: PropTypes.func,
 };
 
 export default Notifications;
