@@ -39,4 +39,41 @@ Requirements:
 
 You can’t use any other variable than map and map2
 
-5. 
+5. Create a function named concatElements
+
+It accepts two arguments page1 and page2. Both are arrays
+It should return a List containing the values of the two pages
+Create a function named mergeElements
+
+It accepts two arguments page1 and page2. Both are objects
+It should return a List containing the values of the two pages
+If two values are the same, page2 values should be used.
+Requirements:
+
+Use list and map from the Immutable.js library
+
+6. Create a function named mergeDeeplyElements
+
+It should accept two arguments, page1 and page2. Both are objects
+It should return a List containing the values of the two pages
+If two values are the same, they should combine each other.
+
+7. Create a function named areMapsEqual
+
+It accepts two arguments map1 and map2. Both are Immutable.js Maps
+It should return true if the Maps are equal
+
+8. Create a function named printBestStudents:
+
+It accepts one object as argument. The object is formed with the following structure:
+const grades = {
+  1: {
+    score: 99,
+    firstName: 'guillaume',
+    lastName: 'salva',
+  }
+};
+Calling the function should filter any student with a score < 70 and print to the console the first name and the last name with the first letter capitalized:
+{
+    "1": { score: 99, firstName: "Guillaume", lastName: "Salva" },
+}
