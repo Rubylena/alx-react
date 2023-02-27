@@ -20,7 +20,7 @@ describe(" Schema Notification.js test", () => {
       ];
     const context = getAllNotificationsByUser("5debd764a7c57c7839d722e9");
     expect(context).toEqual(expect.arrayContaining(result));
-    // expect(getAllNotificationsByUser("5debd764a7c57c7839d722e9")).toEqual(result);
+    // expect(context).toEqual(result);
   });
 
   it('should match results', () => {
